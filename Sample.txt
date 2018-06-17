@@ -96,6 +96,9 @@ if A>a or x=="A is greater than a" :
 	print ("\ntrue")
 else:
 	print ("false")
+
+
+print("--------------------")
 	
 #k = input("enter: ")
 #print(k)
