@@ -1,0 +1,107 @@
+from math import pi, sqrt as squareroot
+import random 
+ 
+print ('yo we start'); x = "A is greater than a"
+print(pi)
+print(random.randint(1,6))
+
+print("-----------------")
+
+print("Handling files")
+try:	
+	f = open("S.txt")
+	z = f.read()
+	print(z)
+	f.close()
+	f = open("S.txt", "w")
+	d = "nine"
+	x = f.write(d)
+	print(x)
+	f.close()
+	f = open("S.txt")
+	print(f.read())
+except:
+	print("Error")
+finally:
+	f.close()	
+
+print("-----------------")
+
+def printA(x, y):
+	"""
+	Printing sequence
+	"""
+	print("A" + x + y)
+	return x
+#only return statement ends 
+printx = printA	
+z = printx("B", "C")
+print z
+
+#try:
+#except <name>:
+
+#raise NameError("Invalid")
+print("Calling another")
+
+def anotherprint(func, a, b):
+	return func(a,b)
+	
+anotherprint(printA, "C", "D")
+
+	
+print("------------")
+	
+for i in range(2):
+	print(x)
+	print(i)
+
+numbers = list(range(3, 8))
+print(numbers)
+list = [1,"tarun","devraj","mudliar"]
+print(list)
+
+for x in list:
+	print(str(x)+"!")
+
+print("---------------")
+
+i =0
+while i<=5:
+	i=i+1
+	if i==2:
+		print("Skip 2")
+		continue
+	if i==4:
+		break
+	print(i)
+	
+print("\n")
+print("---------------")	
+	
+a_b = 7
+print(a_b)
+del a_b
+A = 4
+a = 3
+print(a)
+y = "a" + \
+	"b"
+
+if False and True:
+	print("Check")
+	
+if A>a or x=="A is greater than a" :
+	print ("\n" + "yes")
+	print ("\ntrue")
+else:
+	print ("false")
+	
+#k = input("enter: ")
+#print(k)
+#print("s"*3)
+print(int("7"))
+print("\n")
+print(int("2")+int("3"))
+#print("Enter two numbers to add")
+#print(float(input("Enter a number: ")) + float(input("Enter second number: ")))
