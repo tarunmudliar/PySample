@@ -1,5 +1,23 @@
 from math import pi, sqrt as squareroot
 import random 
+
+print("-----------------")
+#In Py3
+#foo = print()
+#print(foo)
+
+print("-----------------")
+
+dict = {"red":1, "blue":2}
+tup = 4,5
+print(dict["red"])
+print(tup)
+dict["yellow"] = 3
+print(dict.get("foo", "NOT in Dict"))
+s = [i for i in range(0,20) if i%3==0]
+print(s)
+
+print("-----------------")
  
 print ('yo we start'); x = "A is greater than a"
 print(pi)
@@ -55,11 +73,13 @@ print("------------")
 for i in range(2):
 	print(x)
 	print(i)
-
+#first include, second not
 numbers = list(range(3, 8))
 print(numbers)
 list = [1,"tarun","devraj","mudliar"]
-print(list)
+print(list[1:4:1])
+print(list[1:-1])
+print(list[::-1])
 
 for x in list:
 	print(str(x)+"!")
