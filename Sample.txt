@@ -1,10 +1,27 @@
 from math import pi, sqrt as squareroot
 import random 
 
+print("---------------")
+print(", ".join(["spam", "eggs", "ham"]))
+print("Hello Me".replace("Me","World"))
+print("Hello, My, Man".split(", "))
+print(min(1,2,3))
+nums = (7,8,9)
+if all([i>5 for i in nums]):
+	print("All")
+if any([i==7 for i in nums]):
+	print("Seven")
+
 print("-----------------")
 #In Py3
 #foo = print()
 #print(foo)
+
+vari1 = 3
+vari2 = "odd"
+print("The number {0} is {1}".format(vari1, vari2))
+print("The number {a} is {b}".format(a=vari1, b=vari2))
+
 
 print("-----------------")
 
@@ -54,7 +71,7 @@ def printA(x, y):
 #only return statement ends 
 printx = printA	
 z = printx("B", "C")
-print z
+print(z)
 
 #try:
 #except <name>:
