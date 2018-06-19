@@ -1,0 +1,17 @@
+class bottle:
+	def __init__(self, color, type):
+		self.color = color
+		self.type = type
+	def fill(self):
+		print("filled")
+	brand = "cello"
+
+personal = bottle("blue", "plastic")
+print(personal.color)
+personal.fill()
+print(bottle.brand)
+#wont work
+#print(bottle.color)
+#bottle.fill()
+
+	
