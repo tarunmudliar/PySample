@@ -1,3 +1,100 @@
+class Animal(object):
+	def __init__(self, name, color):
+		self.name=name
+		self.color=color
+	def over(self):
+		print("Super")
+class Cat(Animal):
+	def purr(self):
+		print("Purr...")
+	def over(self):
+		print("Sub")
+		#will work in 3
+		#super().over()
+		super(Cat, self).over()
+	
+Cat1 = Cat("Felix","brown")
+print(Cat1.color)
+Cat1.purr()
+Cat1.over()
+
+
+class addN:
+	def __init__(self, str1):
+		self.str1 = str1
+	#Magic methods: sub, mul, trueiv, mod, pow, and, xor, or, lt, le, gt, ge, eq, ne, len, getitem, setitem, delitem, iter, contains	
+	def __add__(self, other):
+		return addN(" ".join([self.str1, other.str1]))
+
+one = addN("Hello")
+two = addN("World")
+three= one + two
+print(three)
+print(three.str1)
+
+class Queue:
+	__hid = 7
+	def __init__(self, contents):
+		self._hiddenList = list(contents)
+	def push(self, value):
+		self._hiddenList.insert(0, value)
+	def pop(self):
+		self._hiddenList.pop(-1)
+	def __repr__(self):
+		return "Queue({})".format(self._hiddenList)
+		
+q = Queue([1,2,3])
+print(q)
+q.push(0)
+print(q)		
+q.pop()
+print(q)
+print(q._hiddenList)
+print(q._Queue__hid)
+
+class Person:
+	
+	def __init__(self, name, repeat):
+		self.name = name
+		self.repeat = repeat
+		self._confidence = "High"
+	def sayBye(self):
+		print("Bye "+ self.name+ " Hi " +self.repeat)
+	
+	@classmethod
+	def sayHi(cls):
+		print("Hi")
+		
+	@classmethod
+	def sayname(cls, name):
+		return cls(name, name)
+	@staticmethod
+	def wave():
+		print("Hey yo")
+	@property
+	def confidence(self):
+		#For Read only
+		#return False
+		return self._confidence
+	@confidence.setter
+	def confidence(self, value):
+		if value == "Super High":
+			password = input("Enter Password: ")
+			if  password == "123456":
+				self._confidence = value
+			else:
+				raise ValueError("Go Away")
+		
+		
+tarun = Person.sayHi()
+newtarun = Person.sayname("tarun")
+newtarun.sayBye()
+newtarun.wave()
+anothertarun = Person("tarun", "tarun")
+print(anothertarun.confidence)
+anothertarun.confidence = "Super High"
+print(anothertarun.confidence)
+
 class bottle:
 	def __init__(self, color, type):
 		self.color = color
