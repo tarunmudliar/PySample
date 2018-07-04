@@ -90,10 +90,14 @@ tarun = Person.sayHi()
 newtarun = Person.sayname("tarun")
 newtarun.sayBye()
 newtarun.wave()
-anothertarun = Person("tarun", "tarun")
-print(anothertarun.confidence)
-anothertarun.confidence = "Super High"
-print(anothertarun.confidence)
+#anothertarun = Person("tarun", "tarun")
+#print(anothertarun.confidence)
+#anothertarun.confidence = "Super High"
+#print(anothertarun.confidence)
+print(newtarun.confidence)
+newtarun.confidence = "Super High"
+print(newtarun.confidence)
+
 
 class bottle:
 	def __init__(self, color, type):
